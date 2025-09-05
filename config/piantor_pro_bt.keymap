@@ -16,6 +16,24 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        mac {
+            bindings = <&mac>;
+            key-positions = <0 1>;
+        };
+    };
+
+    macros {
+        mac: mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp Q &kp N2 &kp W>;
+            label = "MAC";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
