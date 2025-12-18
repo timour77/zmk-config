@@ -50,7 +50,7 @@
             //                    | GUI | LWR | SPC | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp LCTRL  &kp A  &kp S  &mt LSHIFT D  &mt LGUI F  &kp G  &kp H  &mt RIGHT_GUI J  &mt RIGHT_SHIFT K  &kp L  &kp SEMI  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC  &kp LGUI  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BACKSPACE
+&kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp CAPS  &kp A  &kp S  &mt LSHIFT D  &mt LGUI F  &kp G  &kp H  &mt RIGHT_GUI J  &mt RIGHT_SHIFT K  &kp L  &kp SEMI  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp AT_SIGN  &kp LGUI  &lt 1 TAB  &kp SPACE  &kp RET  &mo 2  &kp BACKSPACE
             >;
         };
 
@@ -64,7 +64,7 @@
             //                    | GUI |     | SPC   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC  &kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &kp LSHFT  &bt BT_CLR  &rgb_ug RGB_TOG  &sys_reset  &bootloader  &studio_unlock  &trans  &trans  &trans  &trans  &trans  &trans  &kp LGUI  &trans  &kp SPACE  &kp LGUI  &trans  &kp RIGHT_ALT
+&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC  &kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &tog 0  &tog 3  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &kp LSHFT  &bt BT_CLR  &rgb_ug RGB_TOG  &sys_reset  &bootloader  &studio_unlock  &trans  &trans  &trans  &trans  &trans  &trans  &kp LGUI  &trans  &kp SPACE  &kp LGUI  &trans  &kp RIGHT_ALT
             >;
         };
 
@@ -82,10 +82,17 @@
             >;
         };
 
+        win_layer {
+            display-name = "QWERTY";
+            bindings = <
+&kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &kp CAPS  &kp A  &kp S  &mt LSHIFT D  &mt LGUI F  &kp G  &kp H  &mt RIGHT_GUI J  &mt RIGHT_SHIFT K  &kp L  &kp SEMI  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL  &kp LCTRL  &lt 1 TAB  &kp SPACE  &kp RET  &mo 2  &kp AT_SIGN
+            >;
+        };
+
         extra_layer_1 {
             display-name = "EXTRA 1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -116,13 +123,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-
-        extra_layer_6 {
-            display-name = "EXTRA 6";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 
     conditional_layers {
@@ -130,7 +130,7 @@
 
         tri {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 };
