@@ -32,7 +32,7 @@
         mac: mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N1 &kp Q &kp N2 &kp W>;
+            bindings = <&kp N1 &kp Q &kp N2 &kp W &kp ENTER>;
             label = "MAC";
         };
     };
