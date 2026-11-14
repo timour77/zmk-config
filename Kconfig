@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: MIT
+
+config ZMK_BOOTLOADER_TOUCH
+	bool "Reboot to UF2 bootloader on 1200 baud CDC ACM touch"
+	default y
+	depends on USB_CDC_ACM
+	select CDC_ACM_DTE_RATE_CALLBACK_SUPPORT
+	help
+	  When the USB host sets the virtual baud rate of the CDC ACM serial
+	  port to 1200, reboot into the UF2 bootloader (same as &bootloader).
