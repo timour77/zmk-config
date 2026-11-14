@@ -12,7 +12,11 @@
 #include <zephyr/kernel.h>
 #include <zephyr/sys/reboot.h>
 #include <zephyr/drivers/uart/cdc_acm.h>
-#include <dt-bindings/zmk/reset.h>
+
+/* Not on this library's include path (ZMK adds app/include to the app target only). */
+#ifndef RST_UF2
+#define RST_UF2 0x57 /* UF2 bootloader magic, as ZMK dt-bindings/zmk/reset.h */
+#endif
 
 /* Pick the CDC ACM device: ZMK Studio RPC UART if it is one, else the first okay instance. */
 #if DT_HAS_CHOSEN(zmk_studio_rpc_uart)
